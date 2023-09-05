@@ -1,0 +1,153 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	inline-size: 100%;
+	block-size: 100%;
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;
+	font-family: "BIZ UDPGothic", 'IBM Plex Sans JP', 'Noto Sans JP', Arial, Helvetica, sans-serif;
+}
+
+.side-fit {
+	inline-size: 60%;
+	block-size: 100%;
+	margin-block: 0;
+	margin-inline: auto;
+	background-color: #ffffff;
+	padding-block-start: 5%;
+
+	@media screen and (max-width: 915px){
+		inline-size: 98%;
+	}
+}
+
+h1 {
+	margin: 0;
+	display: grid;
+	place-content: center;
+	place-items: center;
+	grid-auto-flow: column;
+	gap: 1rem;
+	font-size: 4rem;
+	font-weight: bold;
+	inline-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+
+
+	& img {
+		display: block;
+		block-size: 5rem;
+		aspect-ratio: 1/1;
+	}
+}
+
+#main {
+	padding-block-start: 1rem;
+}
+
+.pinp-window {
+	& #main {
+		margin: 0;
+		padding: 0;
+		inline-size: 100%;
+		block-size: 100%;
+		display: grid;
+		grid-template-rows: auto 4rem;
+		gap: 1rem;
+	}
+
+	& button#cps-checker {
+		block-size: auto !important;
+		max-block-size: none !important;
+	}
+
+	& .bottoms {
+		--bottoms-height: 4rem;
+		margin: 0 !important;
+		padding: 0 !important;
+		gap: 1rem !important;
+
+		& #max-cps {
+			padding-inline: 1rem !important;
+		}
+	}
+}
+
+button#cps-checker {
+	display: block;
+	block-size: 28rem;
+	max-block-size: 80%;
+	inline-size: 95%;
+	margin-inline: auto;
+	font-family: inherit;
+	font-size: 5rem;
+	border-radius: 5cqi;
+	border: none;
+	box-shadow: -8px 8px 25px 2px rgba(0, 0, 0, 0.05);
+	background-color: hsl(120, 71%, 90%);
+	&:hover {
+		background-color: hsl(90, 43%, 88%);
+	}
+	&:active {
+		background-color: hsl(120, 50%, 77%);
+	}
+	
+	& #display-max-cps {
+		font-size: 1.5em;
+	}
+	transition: background 0.2s ease;
+
+}
+
+.bottoms {
+	--bottoms-height: 6rem;
+
+	margin-block-start: 1.8rem;
+	display: grid;
+	place-content: center;
+	place-items: center;
+	grid-auto-flow: column;
+	gap: 3rem;
+
+	& #max-cps {
+		display: flex;
+		place-items: center;
+		block-size: var(--bottoms-height);
+		padding-inline: 2rem;
+		border-radius: 1em;
+		font-size: 1.5rem;
+		font-weight: 550;
+		background-color: hsl(185, 68%, 96%);
+		& #display-max-cps {
+			line-height: var(--bottoms-height);
+			font-size: 1.2em;
+		}
+	}
+
+	& button#pinp {
+		block-size: var(--bottoms-height);
+		aspect-ratio: 1/1;
+		border-radius: 1em;
+		border: none;
+		background-color: hsl(185, 68%, 96%);
+		cursor: pointer;
+		box-shadow: 0px 0px 63px 31px rgba(0, 0, 0, 0.005);
+
+		&:hover {
+			background-color: hsl(185, 52%, 90%);
+			box-shadow: 0px 0px 63px 31px rgba(0, 0, 0, 0.035);
+		}
+		&:active {
+			background-color: hsl(183, 51%, 85%);
+		}
+		transition: box-shadow 0.2s ease, background 0.2s ease;
+
+		& img {
+			block-size: 50%;
+			aspect-ratio: 1/1;
+		}
+	}
+}

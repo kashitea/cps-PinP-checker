@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PinP-CPS-Checker</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="module" src="cps.js" defer></script>
+	<script type="module" src="pinp.js" defer></script>
+</head>
+<body>
+	<div id="pinp-container" class="side-fit">
+		<h1><img alt="" src="./icons/stopwatch.svg" type="image/svg+xml">CPS - Checker</h1>
+		<div id="main">
+			<button id="cps-checker"><span id="display-cps">0</span>cps</button>
+			<div class="bottoms">
+				<div id="max-cps">MAX: <span id="display-max-cps">0</span>cps</div>
+				<button id="pinp" title="ピクチャー・イン・ピクチャー">
+					<img alt="" src="./icons/pip.svg" type="image/svg+xml">
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
